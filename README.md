@@ -51,6 +51,10 @@ The goal of this project is to build a responsive search interface that fetches 
 ### ▶️ How to Run the Project
 
 1. Clone the repository
+
+   ```bash
+   git clone https://github.com/monster-1951/vue-search-ui.git
+   ```
 2. Install dependencies
 
    ```bash
