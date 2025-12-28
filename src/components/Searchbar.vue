@@ -8,14 +8,17 @@
 
 <script setup lang="ts">
 
+// modelValue is prop recieved by Main component . It is user's query
 const props = defineProps<{
     modelValue: string
 }>()
 
+// Defining the emit which gets triggered when modelValue is updated
 const emit = defineEmits<{
     (e: 'update:modelValue', value: string): void
 }>()
 
+// This function triggers the above emit . It informs Main.vue component that modelValue/query is being updated and passes it the value too , so that , the Main.vue component handles this event 
 const onInput = (event: Event) => {
     const target = event.target as HTMLInputElement;
     emit('update:modelValue', (target.value));
@@ -29,8 +32,6 @@ const onInput = (event: Event) => {
     border-radius: 25px;
     padding: 4px;
     width: 85%;
-    /* width: 100vh;
-    max-width: 500px; */
     margin: 20px auto;
 }
 
